@@ -1,0 +1,17 @@
+@use './variables' as *;
+
+@mixin smooth-transition(
+  $properties: all,
+  $duration: $transition-speed, // now this will work
+  $easing: ease-in-out
+) {
+  transition: $properties $duration $easing;
+}
+
+@mixin hover-zoom-rotate($scale: $hover-scale, $rotate: $hover-rotate) {
+  &:hover {
+    transform: scale($scale) rotate($rotate);
+    box-shadow: $card-shadow;
+  }
+}
+
