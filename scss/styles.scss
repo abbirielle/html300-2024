@@ -1,6 +1,10 @@
 // Import variables and mixins to use in this stylesheet
 @use './variables' as *;
 @use './mixins' as *;
+@use './layout';
+@use './nav';
+@use './card'; // you already have this
+
 
 // Style for the card component
 .card {

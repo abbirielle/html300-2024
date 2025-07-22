@@ -1,13 +1,18 @@
-.card {
-  background-color: #0044cc;
-  color: white;
-  padding: 2rem;
-  border-radius: 1rem;
-  text-align: center;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease-in-out;
-}
-.card:hover {
-  transform: scale(1.05) rotate(3deg);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+/* Error: expected "}".
+ *    ,
+ * 46 |   grid-area: main;
+ *    |                   ^
+ *    '
+ *   scss/_layout.scss 46:19  @use
+ *   scss/styles.scss 4:1     root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "}".\a    \2577 \a 46 \2502    grid-area: main;\a    \2502                    ^\a    \2575 \a   scss/_layout.scss 46:19  @use\a   scss/styles.scss 4:1     root stylesheet';
 }
