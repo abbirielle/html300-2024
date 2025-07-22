@@ -1,12 +1,97 @@
-.card {
-  background-color: $primary-color;
-  color: white;
-  padding: 2rem;
-  border-radius: 1rem;
-  text-align: center;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+$blush: #f8d3dc;
+$peach: #ffe7d4;
+$lavender: #e8ddf3;
+$sky: #d8eafc;
+$text: #444;
+$accent: #d69aa4;
 
-  @include smooth-transition(transform);
-  @include hover-zoom-rotate;
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: #fff8f6;
+  color: $text;
+}
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100vh;
+
+  &__header {
+    grid-area: header;
+    background: linear-gradient(to right, $blush, $peach);
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  &__nav {
+    grid-area: nav;
+    background-color: $lavender;
+    border-bottom: 1px solid #eee;
+
+    .nav__list {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+      padding: 0.75rem;
+      margin: 0;
+
+      .nav__item a {
+        text-decoration: none;
+        color: $text;
+        font-weight: 600;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background-color: rgba(214, 154, 164, 0.15);
+        }
+      }
+    }
+  }
+
+  &__sidebar {
+    grid-area: sidebar;
+    background-color: $sky;
+    padding: 1.25rem;
+    font-size: 0.95rem;
+    border-right: 1px solid #ddd;
+  }
+
+  &__main {
+    grid-area: main;
+    background-color: white;
+    padding: 2rem;
+
+    h2 {
+      margin-top: 0;
+      color: $accent;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+
+  &__footer {
+    grid-area: footer;
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: #777;
+  }
 }
 

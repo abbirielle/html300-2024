@@ -2,19 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Card with Transition Effect</title>
-  <!-- Link to compiled CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abbirielle's Layout</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!--
-    Card component example:
-    This card uses CSS transitions and transforms for a smooth hover effect.
-  -->
-  <div class="card">
-    Welcome to my portfolio!
+  <div class="layout">
+    <header class="layout__header">Abbirielle</header>
+
+    <nav class="layout__nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#">About</a></li>
+        <li class="nav__item"><a href="#">Projects</a></li>
+        <li class="nav__item"><a href="#">Blog</a></li>
+        <li class="nav__item"><a href="#">Gallery</a></li>
+        <li class="nav__item"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <aside class="layout__sidebar">
+      <p>heyy 👋 I’m Abbirielle. welcome to my site.</p>
+    </aside>
+
+    <main class="layout__main">
+      <h2>meet me</h2>
+      <p>(write here)</p>
+      
+      <div class="card">
+        <h3>This is a card!</h3>
+        <p>Styled with SCSS and Gulp 🎨</p>
+      </div>
+    </main>
+
+    <footer class="layout__footer">
+      © 2025 Abbirielle — All rights reserved
+    </footer>
   </div>
 </body>
 </html>
-
